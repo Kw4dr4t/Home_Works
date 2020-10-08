@@ -2,9 +2,9 @@ import functools
 from time import sleep, time
 
 
-def measure(func):
+def time_it(func):
     """
-    [measure(func):
+    [time_it(func):
     Check execution time of a given function]
     Returns:
     _time_it: Total execution time in nanoseconds(1/1000000000 os a second)
@@ -21,7 +21,7 @@ def measure(func):
     return _time_it
 
 
-@measure
+@time_it
 def countdown(n: int):
     """
     [countdown() -
@@ -36,5 +36,5 @@ def countdown(n: int):
 
 
 countdown(10)
-print(measure.__doc__)
+print(time_it.__doc__)
 print(countdown.__doc__)
