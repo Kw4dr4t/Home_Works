@@ -16,7 +16,6 @@ def measure(func):
             end_ = int(round(time() * 1000000000)) - start
             print(f"Total execution time: {end_ if end_ > 0 else 0} ns")
 
-       
     return _time_it
 
 
@@ -29,15 +28,17 @@ def fibonacci(n: int):
     """
     a, b, counter = 0, 1, 0
     while True:
-        if (counter > n): return
-        yield a 
+        if (counter > n):
+            return
+        yield a
         a, b = b, a + b
         counter += 1
-        
+
+
 f = fibonacci(10)
 
 for x in f:
     print(x)
-    
+
 print(measure.__doc__)
 print(fibonacci.__doc__)
